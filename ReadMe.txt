@@ -1,1 +1,1 @@
-this contains all the static web projects that are required for learning
+Please add the required files and folder structures in the current subfolder
