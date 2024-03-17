@@ -26,17 +26,22 @@ let createBox = document.getElementsByClassName('createBox')[0];
         }
 
         function divStyle(text){
-            let div = document.createElement("div");
-            div.className = 'note';
-            div.innerHTML = '<div class="details">'+'<h3>'+text+'</h3>'+'</div>';
-
-            // remove on double click 
-            div.addEventListener("dblclick", function(){
-                div.remove();
-            })
-
-            // random colors
-            div.setAttribute('style', 'background:'+color()+'');
-
-            notes.appendChild(div);
+            if (text.length > 0){
+                let div = document.createElement("div");
+                div.className = 'note';
+                div.innerHTML = '<div class="details">'+'<h3>'+text+'</h3>'+'</div>';
+    
+                // remove on double click 
+                div.addEventListener("dblclick", function(){
+                    div.remove();
+                })
+    
+                // random colors
+                div.setAttribute('style', 'background:'+color()+'');
+    
+                notes.appendChild(div);
+            }
         }
+        
+        
+        
